@@ -9,60 +9,344 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet" />
+
+    <!-- Fonts Links For Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
     <link rel="stylesheet" href="../css/styles.css">
     <title>Clean Service</title>
 </head>
 
 <body>
-    <nav>
-        <div class="nav-left">
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Locations</a></li>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar__left">
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--active">Home</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">About</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Services</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Reviews</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Locations</a></li>
             </ul>
         </div>
-        <div class="nav-right">
-            <div class="search-container">
-                <input type="text" placeholder="Search">
+        <div class="navbar__right">
+            <div class="search-bar">
+                <input type="text" class="search-bar__input" placeholder="Search">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="search-icon">
+                    stroke="currentColor" class="search-bar__icon">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 </svg>
             </div>
-            <select>
+            <select class="navbar__select">
                 <option value="en">Language</option>
                 <option value="es">Spanish</option>
                 <option value="fr">French</option>
             </select>
-            <button>Register</button>
-            <button>Sign in</button>
-            <div>
+            <button class="navbar__button">Register</button>
+            <button class="navbar__button">Sign in</button>
+            <div class="navbar__profile">
                 <img src="https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="profile" class="profile-icon">
+                    alt="profile" class="navbar__profile-icon">
             </div>
         </div>
     </nav>
+
+    <!-- Banner -->
     <div class="banner">
-        <div class="banner-text-container">
-            <h1><span style="color: #ffb703">Professional</span> Cleaning Services</h1>
-            <div class="button-banner-container">
-                <button class="cta">
+        <div class="banner__text-container">
+            <h1 class="banner__title"><span style="color: #ffb703">Professional</span> Cleaning Services</h1>
+            <div class="banner__buttons">
+                <button class="banner__button banner__button--cta">
                     <span>Book now</span>
                     <svg width="15px" height="10px" viewBox="0 0 13 10">
                         <path d="M1,5 L11,5"></path>
                         <polyline points="8 1 12 5 8 9"></polyline>
                     </svg>
                 </button>
-                <button class="feedback-btn">View Feedback</button>
-
+                <button class="banner__button banner__button--feedback">View Feedback</button>
             </div>
         </div>
-        <img src="/images/cleaner.png" alt="banner-images">
+        <img src="/images/cleaner.png" alt="banner-images" class="banner__image">
     </div>
+
+    <!-- Cleaners Card Category -->
+    <div class="cleaner-card-category">
+        <h1 class="cleaner-card-category__title">Find easier ways for you to contact with Cleaners</h1>
+
+        <!-- Cleaner Card Grid -->
+        <div class="cleaner-card-category__grid">
+            <!-- Cleaner Card 1 -->
+            <div class="cleaner-card">
+                <div class="cleaner-card__image-container">
+                    <img src="../images/end-of-tenancy-cleaning.jpg" alt="End of tenancy Cleaning"
+                        class="cleaner-card__image">
+                    <div class="cleaner-card__save">
+                        <svg class="cleaner-card__save-icon" width="683" height="683" viewBox="0 0 683 683" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_993_25)">
+                                <mask id="mask0_993_25" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="683" height="683">
+                                    <path d="M0 -0.00012207H682.667V682.667H0V-0.00012207Z" fill="white"></path>
+                                </mask>
+                                <g mask="url(#mask0_993_25)">
+                                    <path
+                                        d="M148.535 19.9999C137.179 19.9999 126.256 24.5092 118.223 32.5532C110.188 40.5866 105.689 51.4799 105.689 62.8439V633.382C105.689 649.556 118.757 662.667 134.931 662.667H135.039C143.715 662.667 151.961 659.218 158.067 653.09C186.451 624.728 270.212 540.966 304.809 506.434C314.449 496.741 327.623 491.289 341.335 491.289C355.045 491.289 368.22 496.741 377.859 506.434C412.563 541.074 496.752 625.242 524.816 653.348C530.813 659.314 538.845 662.667 547.308 662.667C563.697 662.667 576.979 649.395 576.979 633.019V62.8439C576.979 51.4799 572.48 40.5866 564.447 32.5532C556.412 24.5092 545.489 19.9999 534.133 19.9999H148.535Z"
+                                        stroke="#ffb703" stroke-width="40" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_993_25">
+                                    <rect width="682.667" height="682.667" fill="white"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="cleaner-card__text">
+                    <p class="cleaner-card__title">End of tenancy Cleaning</p>
+                    <div class="cleaner-card__icon-box">
+                        <p class="cleaner-card__icon-text">Read More</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cleaner Card 2 -->
+            <div class="cleaner-card">
+                <div class="cleaner-card__image-container">
+                    <img src="../images/after-builder-cleaning.webp" alt="After builder Cleaning"
+                        class="cleaner-card__image">
+                    <div class="cleaner-card__save">
+                        <svg class="cleaner-card__save-icon" width="683" height="683" viewBox="0 0 683 683" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_993_25)">
+                                <mask id="mask0_993_25" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="683" height="683">
+                                    <path d="M0 -0.00012207H682.667V682.667H0V-0.00012207Z" fill="white"></path>
+                                </mask>
+                                <g mask="url(#mask0_993_25)">
+                                    <path
+                                        d="M148.535 19.9999C137.179 19.9999 126.256 24.5092 118.223 32.5532C110.188 40.5866 105.689 51.4799 105.689 62.8439V633.382C105.689 649.556 118.757 662.667 134.931 662.667H135.039C143.715 662.667 151.961 659.218 158.067 653.09C186.451 624.728 270.212 540.966 304.809 506.434C314.449 496.741 327.623 491.289 341.335 491.289C355.045 491.289 368.22 496.741 377.859 506.434C412.563 541.074 496.752 625.242 524.816 653.348C530.813 659.314 538.845 662.667 547.308 662.667C563.697 662.667 576.979 649.395 576.979 633.019V62.8439C576.979 51.4799 572.48 40.5866 564.447 32.5532C556.412 24.5092 545.489 19.9999 534.133 19.9999H148.535Z"
+                                        stroke="#ffb703" stroke-width="40" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_993_25">
+                                    <rect width="682.667" height="682.667" fill="white"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="cleaner-card__text">
+                    <p class="cleaner-card__title">After builder Cleaning</p>
+                    <div class="cleaner-card__icon-box">
+                        <p class="cleaner-card__icon-text">Read More</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cleaner Card 3 -->
+            <div class="cleaner-card">
+                <div class="cleaner-card__image-container">
+                    <img src="../images/one-off-deep-cleaning.jpg" alt="One off deep Cleaning"
+                        class="cleaner-card__image">
+                    <div class="cleaner-card__save">
+                        <svg class="cleaner-card__save-icon" width="683" height="683" viewBox="0 0 683 683" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_993_25)">
+                                <mask id="mask0_993_25" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="683" height="683">
+                                    <path d="M0 -0.00012207H682.667V682.667H0V-0.00012207Z" fill="white"></path>
+                                </mask>
+                                <g mask="url(#mask0_993_25)">
+                                    <path
+                                        d="M148.535 19.9999C137.179 19.9999 126.256 24.5092 118.223 32.5532C110.188 40.5866 105.689 51.4799 105.689 62.8439V633.382C105.689 649.556 118.757 662.667 134.931 662.667H135.039C143.715 662.667 151.961 659.218 158.067 653.09C186.451 624.728 270.212 540.966 304.809 506.434C314.449 496.741 327.623 491.289 341.335 491.289C355.045 491.289 368.22 496.741 377.859 506.434C412.563 541.074 496.752 625.242 524.816 653.348C530.813 659.314 538.845 662.667 547.308 662.667C563.697 662.667 576.979 649.395 576.979 633.019V62.8439C576.979 51.4799 572.48 40.5866 564.447 32.5532C556.412 24.5092 545.489 19.9999 534.133 19.9999H148.535Z"
+                                        stroke="#ffb703" stroke-width="40" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_993_25">
+                                    <rect width="682.667" height="682.667" fill="white"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="cleaner-card__text">
+                    <p class="cleaner-card__title">One off deep Cleaning</p>
+                    <div class="cleaner-card__icon-box">
+                        <p class="cleaner-card__icon-text">Read More</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cleaner Card 4 -->
+            <div class="cleaner-card">
+                <div class="cleaner-card__image-container">
+                    <img src="../images/office-cleaning.jpg" alt="Office Cleaning" class="cleaner-card__image">
+                    <div class="cleaner-card__save">
+                        <svg class="cleaner-card__save-icon" width="683" height="683" viewBox="0 0 683 683" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_993_25)">
+                                <mask id="mask0_993_25" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="683" height="683">
+                                    <path d="M0 -0.00012207H682.667V682.667H0V-0.00012207Z" fill="white"></path>
+                                </mask>
+                                <g mask="url(#mask0_993_25)">
+                                    <path
+                                        d="M148.535 19.9999C137.179 19.9999 126.256 24.5092 118.223 32.5532C110.188 40.5866 105.689 51.4799 105.689 62.8439V633.382C105.689 649.556 118.757 662.667 134.931 662.667H135.039C143.715 662.667 151.961 659.218 158.067 653.09C186.451 624.728 270.212 540.966 304.809 506.434C314.449 496.741 327.623 491.289 341.335 491.289C355.045 491.289 368.22 496.741 377.859 506.434C412.563 541.074 496.752 625.242 524.816 653.348C530.813 659.314 538.845 662.667 547.308 662.667C563.697 662.667 576.979 649.395 576.979 633.019V62.8439C576.979 51.4799 572.48 40.5866 564.447 32.5532C556.412 24.5092 545.489 19.9999 534.133 19.9999H148.535Z"
+                                        stroke="#ffb703" stroke-width="40" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_993_25">
+                                    <rect width="682.667" height="682.667" fill="white"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="cleaner-card__text">
+                    <p class="cleaner-card__title">Office Cleaning</p>
+                    <div class="cleaner-card__icon-box">
+                        <p class="cleaner-card__icon-text">Read More</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cleaner Card 5 -->
+            <div class="cleaner-card">
+                <div class="cleaner-card__image-container">
+                    <img src="../images/environmental-cleaning.jpg" alt="Environmental Cleaning"
+                        class="cleaner-card__image">
+                    <div class="cleaner-card__save">
+                        <svg class="cleaner-card__save-icon" width="683" height="683" viewBox="0 0 683 683" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_993_25)">
+                                <mask id="mask0_993_25" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="683" height="683">
+                                    <path d="M0 -0.00012207H682.667V682.667H0V-0.00012207Z" fill="white"></path>
+                                </mask>
+                                <g mask="url(#mask0_993_25)">
+                                    <path
+                                        d="M148.535 19.9999C137.179 19.9999 126.256 24.5092 118.223 32.5532C110.188 40.5866 105.689 51.4799 105.689 62.8439V633.382C105.689 649.556 118.757 662.667 134.931 662.667H135.039C143.715 662.667 151.961 659.218 158.067 653.09C186.451 624.728 270.212 540.966 304.809 506.434C314.449 496.741 327.623 491.289 341.335 491.289C355.045 491.289 368.22 496.741 377.859 506.434C412.563 541.074 496.752 625.242 524.816 653.348C530.813 659.314 538.845 662.667 547.308 662.667C563.697 662.667 576.979 649.395 576.979 633.019V62.8439C576.979 51.4799 572.48 40.5866 564.447 32.5532C556.412 24.5092 545.489 19.9999 534.133 19.9999H148.535Z"
+                                        stroke="#ffb703" stroke-width="40" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_993_25">
+                                    <rect width="682.667" height="682.667" fill="white"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="cleaner-card__text">
+                    <p class="cleaner-card__title">Environmental Cleaning</p>
+                    <div class="cleaner-card__icon-box">
+                        <p class="cleaner-card__icon-text">Read More</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cleaner Card 6 -->
+            <div class="cleaner-card">
+                <div class="cleaner-card__image-container">
+                    <img src="../images/sanitization-disinfection.webp" alt="Sanitization and Disinfection"
+                        class="cleaner-card__image">
+                    <div class="cleaner-card__save">
+                        <svg class="cleaner-card__save-icon" width="683" height="683" viewBox="0 0 683 683" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_993_25)">
+                                <mask id="mask0_993_25" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="683" height="683">
+                                    <path d="M0 -0.00012207H682.667V682.667H0V-0.00012207Z" fill="white"></path>
+                                </mask>
+                                <g mask="url(#mask0_993_25)">
+                                    <path
+                                        d="M148.535 19.9999C137.179 19.9999 126.256 24.5092 118.223 32.5532C110.188 40.5866 105.689 51.4799 105.689 62.8439V633.382C105.689 649.556 118.757 662.667 134.931 662.667H135.039C143.715 662.667 151.961 659.218 158.067 653.09C186.451 624.728 270.212 540.966 304.809 506.434C314.449 496.741 327.623 491.289 341.335 491.289C355.045 491.289 368.22 496.741 377.859 506.434C412.563 541.074 496.752 625.242 524.816 653.348C530.813 659.314 538.845 662.667 547.308 662.667C563.697 662.667 576.979 649.395 576.979 633.019V62.8439C576.979 51.4799 572.48 40.5866 564.447 32.5532C556.412 24.5092 545.489 19.9999 534.133 19.9999H148.535Z"
+                                        stroke="#ffb703" stroke-width="40" stroke-miterlimit="10" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_993_25">
+                                    <rect width="682.667" height="682.667" fill="white"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="cleaner-card__text">
+                    <p class="cleaner-card__title">Sanitization and Disinfection</p>
+                    <div class="cleaner-card__icon-box">
+                        <p class="cleaner-card__icon-text">Read More</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="links">
+                        <li><a href="#">End of Tenancy Cleaning</a></li>
+                        <li><a href="#">After Builder Cleaning</a></li>
+                        <li><a href="#">Office Cleaning</a></li>
+                        <li><a href="#">Deep Cleaning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="links">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form action="#">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cleaning Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
 </body>
 
 </html>
